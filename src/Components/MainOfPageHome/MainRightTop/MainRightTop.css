@@ -1,0 +1,10 @@
+.main__right__top{
+    position: relative;
+}
+.main__right__top__item{
+    display: none;
+    color:white ;
+}
+.showTab{
+    display: block;
+}

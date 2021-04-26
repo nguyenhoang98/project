@@ -1,0 +1,14 @@
+.main__center__top__table{
+    width:100% ;
+    height: auto;
+    color :rgb(219, 218, 218) ;
+    font-size: 13px;
+    border-collapse: collapse;
+}
+tr , th , td{
+    border-bottom: 1px solid #444 ;
+    padding:2px ;
+}
+th{
+    text-align:center ;
+}

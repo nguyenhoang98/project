@@ -1,0 +1,70 @@
+*{
+  box-sizing: border-box;
+  margin:0 ;
+  padding:0 ;
+}
+html , body{
+  height: 100%;
+}
+.btn{
+  border:none ;
+  outline: none;
+  background : none ;
+  padding:10px 16px ;
+  color:white ;
+  cursor: pointer;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-between ;
+}
+.grid{
+  width: 100% ;
+  display: grid;
+  grid-template-columns: 1fr 350px 400px;
+}
+.text-orange {
+  color : #f7941d ;
+}
+.text-purple {
+  color: #ff25ff;
+}
+.text-green {
+  color: #18c451 ;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Custom scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#333;; 
+}

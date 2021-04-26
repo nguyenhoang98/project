@@ -26,6 +26,7 @@ class MainCenterBottom extends Component {
               <th>Tổng KL</th>
             </tr>
           </thead>
+          <tbody>{this.props.children}</tbody>
         </table>
       </div>
     );

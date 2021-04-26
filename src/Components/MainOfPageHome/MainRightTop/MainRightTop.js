@@ -14,7 +14,48 @@ class MenuRightTop extends Component {
             showTab: isOpenTab === 1,
           })}
         >
-          Tab 1
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "3fr 3fr 1fr",
+              padding: 10,
+            }}
+          >
+            <div>Lệnh trong ngày</div>
+            <div>Lệnh điều kiện</div>
+            <div>
+              <span>
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+              </span>
+              <span
+                style={{
+                  padding: "0px 10px",
+                }}
+              >
+                <i class="fa fa-minus" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+
+          <table
+            style={{
+              width: "100%",
+              fontSize: 12,
+            }}
+          >
+            <thead>
+              <tr>
+                <th></th>
+                <th>Lệnh</th>
+                <th>Mã</th>
+                <th>Khối lượng khớp</th>
+                <th>Giá</th>
+                <th>TT</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>{this.props.children}</tbody>
+          </table>
         </div>
         <div
           className={classNames("main__right__top__item item-2", {

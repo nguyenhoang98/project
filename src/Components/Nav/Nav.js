@@ -1,19 +1,29 @@
 import React, { Component } from "react";
 import "./Nav.css";
 import LOGO_VND from "../../Assets/logo.svg";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
 class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
       time: "",
+      usename: "",
     };
+    this.handleOnLogOut = this.handleOnLogOut.bind(this);
   }
   componentDidMount() {
     this.timeID = this.getTime();
     setInterval(() => {
       this.getTime();
     }, 1000);
+    var token = localStorage.getItem("vnd");
+    var decoded = jwt_decode(token);
+    console.log(decoded);
+    this.setState({
+      usename: decoded.customerName,
+    });
   }
   formatTime(t) {
     if (t < 10) {
@@ -33,8 +43,15 @@ class Nav extends Component {
       time: h + ":" + m + ":" + s + " " + date + "-" + month + "-" + y,
     });
   }
+  handleOnLogOut() {
+    console.log(this.props);
+    const { history } = this.props;
+    const { push } = history;
+    localStorage.removeItem("vnd");
+    push("/login-page");
+  }
   render() {
-    const { time } = this.state;
+    const { time, usename } = this.state;
     const { handleShowModelTopPlayer } = this.props;
     return (
       <div className="nav flex">
@@ -96,14 +113,17 @@ class Nav extends Component {
             <li>
               <a href="#">
                 <i className="fa fa-user" aria-hidden="true"></i>
-                &nbsp; Nguyễn Văn Hoàng &nbsp;
+                &nbsp; {usename} &nbsp;
                 <i className="fa fa-caret-down" aria-hidden="true"></i>
               </a>
               <div className="logout">
-                <Link className="btn btn-logout" to="./login-page">
+                <button
+                  className="btn btn-logout"
+                  onClick={this.handleOnLogOut}
+                >
                   <i class="fa fa-sign-out" aria-hidden="true"></i>
                   &nbsp; logout
-                </Link>
+                </button>
               </div>
             </li>
           </ul>
@@ -112,4 +132,4 @@ class Nav extends Component {
     );
   }
 }
-export default Nav;
+export default withRouter(Nav);

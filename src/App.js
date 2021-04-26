@@ -4,6 +4,7 @@ import configureStore from "./Redux/config";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import Wrap from "./Components/Wrap/Wrap";
+import { ToastContainer } from "react-toastify";
 const store = configureStore();
 class App extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class App extends Component {
         <Router>
           <div className="app">
             <Wrap />
+            <ToastContainer />
           </div>
         </Router>
       </Provider>

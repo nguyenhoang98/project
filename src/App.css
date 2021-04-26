@@ -21,9 +21,16 @@ html , body{
   justify-content: space-between ;
 }
 .grid{
-  width: 100% ;
+  width: 100% ; ;
   display: grid;
   grid-template-columns: 1fr 350px 400px;
+}
+.flex_table_code{
+  width:100% ;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .text-orange {
   color : #f7941d ;
@@ -60,7 +67,7 @@ html , body{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #333; 
+  background: rgb(23, 139, 0); 
   border-radius: 10px;
 }
 

@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
-
-const appReducers = combineReducers({});
+import TableCode from "./TableCode";
+import CommandNumberTable from "./CommanNumberTable";
+const appReducers = combineReducers({
+  TableCode: TableCode,
+  CommandNumberTable: CommandNumberTable,
+});
 
 export default appReducers;

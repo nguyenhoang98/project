@@ -3,9 +3,9 @@ import "./MainOfPageHome.css";
 import MainLeftTop from "../../Components/MainOfPageHome/MainLeftTop/MainLeftTop";
 import MainLeftBottom from "../../Components/MainOfPageHome/MainLeftBottom/MainLeftBottom";
 import MainCenterTop from "../../Components/MainOfPageHome/MainCenterTop/MainCenterTop";
-import MainCenterBottom from "../../Components/MainOfPageHome/MainCenterBottom/MainCenterBottom";
+import TableCodeContainer from "../../Containers/TableCodeContainer/TableCodeContainer";
 import MenuChangeTab from "../../Components/MenuChangeTab/MenuChangeTab";
-import MenuRightTop from "../../Components/MainOfPageHome/MainRightTop/MainRightTop";
+import MainRightTopContainer from "../../Containers/MainRightTopContainer/MainRightTopContainer";
 import MenuChangeTabTradingView from "../../Components/MenuChangeTabTradingView/MenuChangeTabTradingView";
 import MainRightBottom from "../../Components/MainOfPageHome/MainRightBottom/MainRightBottom";
 class MainOfPageHome extends Component {
@@ -50,10 +50,10 @@ class MainOfPageHome extends Component {
         </div>
         <div className="main__center">
           <MainCenterTop />
-          <MainCenterBottom />
+          <TableCodeContainer />
         </div>
         <div className="main__right">
-          <MenuRightTop isOpenTab={isOpenTab} />
+          <MainRightTopContainer isOpenTab={isOpenTab} />
           <MainRightBottom
             isOpenTabForm={isOpenTabForm}
             handleChangeTabForm={this.handleChangeTabForm}

@@ -1,23 +1,27 @@
 import axios from "axios";
-const instance = axios.create();
-
-instance.interceptors.request.use(
-  function (config) {
-    axios.defaults.headers.common["Authorization"] = AUTH_TOKEN;
-    axios.defaults.headers.post["Content-Type"] =
-      "application/x-www-form-urlencoded";
-    return config;
-  },
-  function (error) {
-    return Promise.reject(error);
+class AxiosService {
+  constructor() {
+    let instance = axios.create();
+    instance.interceptors.response.use(this.handleSuccess, this.handleError);
+    this.instance = instance;
   }
-);
-
-instance.interceptors.response.use(
-  function (response) {
+  handleSuccess(response) {
     return response;
-  },
-  function (error) {
-    return Promise.reject(error);
   }
-);
+  handleError(err) {
+    return Promise.reject(err);
+  }
+  get(url) {
+    return this.instance.get(url);
+  }
+  post(url, data) {
+    return this.instance.post(url, data);
+  }
+  put(url, data) {
+    return this.instance.put(url, data);
+  }
+  delete(url) {
+    return this.instance.delete(url);
+  }
+}
+export default new AxiosService();

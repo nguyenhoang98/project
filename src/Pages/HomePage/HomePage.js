@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./HomePage.css";
 import MainOfPageHome from "../../Components/MainOfPageHome/MainOfPageHome";
+
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +16,7 @@ class HomePage extends Component {
     );
     this.handleChangeTabForm = this.handleChangeTabForm.bind(this);
   }
+  componentDidMount() {}
   onChangePage(t) {
     this.setState({
       isOpenTab: t,

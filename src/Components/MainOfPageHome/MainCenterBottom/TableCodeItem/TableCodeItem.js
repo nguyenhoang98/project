@@ -8,7 +8,14 @@ class TableCodeItem extends Component {
     const { data } = this.props;
     return (
       <tr className="tablecodeitem">
-        <td> {data.code} </td>
+        <td
+          style={{
+            color: "#0f0",
+          }}
+        >
+          {" "}
+          {data.code}{" "}
+        </td>
         <td> {data.open} </td>
         <td> {data.change} </td>
         <td> {data.open} </td>

@@ -1,10 +1,24 @@
 .main__right__top{
-    position: relative;
+    position: relative ;
+    overflow: auto;
 }
 .main__right__top__item{
     display: none;
-    color:white ;
+    color:#fff ;
 }
 .showTab{
     display: block;
+}
+.mainrighttop-table{
+    width: 100%;
+    height:100% ;
+    border:none ; ;
+    border-collapse: collapse;
+}
+.mainrighttop-table tr:nth-child(even){
+    background :  hsla(0,0%,47.1%,.15)  ;
+}
+.mainrighttop-table tr ,
+.mainrighttop-table td{
+    padding:6px !important ;
 }

@@ -121,7 +121,7 @@ class Nav extends Component {
                   className="btn btn-logout"
                   onClick={this.handleOnLogOut}
                 >
-                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <i className="fa fa-sign-out" aria-hidden="true"></i>
                   &nbsp; logout
                 </button>
               </div>

@@ -52,7 +52,7 @@ class MenuChangeTabTradingView extends Component {
               background: bgColor === 3 ? "#2f3240" : "",
             }}
           >
-            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            <i className="fa fa-bar-chart" aria-hidden="true"></i>
           </span>
           <span
             className="menuchangetabtradingview__right__link"
@@ -61,7 +61,7 @@ class MenuChangeTabTradingView extends Component {
               background: bgColor === 4 ? "#2f3240" : "",
             }}
           >
-            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+            <i className="fa fa-pie-chart" aria-hidden="true"></i>
           </span>
         </div>
       </div>

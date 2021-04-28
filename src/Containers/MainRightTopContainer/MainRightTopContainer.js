@@ -19,7 +19,6 @@ class MainRightTopContainer extends Component {
   }
   render() {
     const { isOpenTab, CommandNumberTableData } = this.props;
-    console.log(CommandNumberTableData);
     return (
       <MenuRightTop isOpenTab={isOpenTab}>
         {CommandNumberTableData.map((value, index) => {

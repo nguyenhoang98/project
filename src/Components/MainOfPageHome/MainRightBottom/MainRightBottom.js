@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./MainRightBottom.css";
 import classNames from "classnames";
-import Form1 from "./Form1/Form1";
+import Form1Container from "../../../Containers/Form1Container/Form1Container";
 import Form2 from "./Form2/Form2";
 import ControlTab from "./ControlTab/ControlTab";
 class MainRightBottom extends Component {
@@ -16,7 +16,7 @@ class MainRightBottom extends Component {
       <div className="main__right__bottom">
         <div className="main__right__bottom__content">
           <ControlTab handleChangeTabForm={handleChangeTabForm} />
-          <Form1 isOpenTabForm={isOpenTabForm} />
+          <Form1Container isOpenTabForm={isOpenTabForm} />
           <Form2 isOpenTabForm={isOpenTabForm} />
           <div
             className={classNames("tab__form tab__form-3", {

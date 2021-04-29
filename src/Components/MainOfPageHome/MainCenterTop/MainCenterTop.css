@@ -1,13 +1,16 @@
+.main__center__top{
+    overflow: auto;
+}
 .main__center__top__table{
     width:100% ;
-    height: auto;
     color :#fff ;
     font-size: 13px;
     border-collapse: collapse;
+
 }
 tr , th , td{
     border-bottom: 1px solid #444 ;
-    padding:2px ;
+    padding: 5px !important; ;
 }
 th{
     text-align:center ;

@@ -14,10 +14,8 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className="app">
-            <Wrap />
-            <ToastContainer />
-          </div>
+          <Wrap />
+          <ToastContainer />
         </Router>
       </Provider>
     );

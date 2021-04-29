@@ -36,7 +36,7 @@ class Form1 extends Component {
     e.preventDefault();
     console.log("BUY");
     const data = {
-      side: this.state.side,
+      side: "NB",
       symbol: this.state.symbol,
       priceType: this.state.priceType,
       quantity: Number(this.state.quantity),
@@ -93,7 +93,14 @@ class Form1 extends Component {
     }, 100);
   }
   render() {
-    const { code, price, quantity, priceType, isOpenToolTip } = this.state;
+    const {
+      code,
+      price,
+      quantity,
+      priceType,
+      isOpenToolTip,
+      symbol,
+    } = this.state;
     const { isOpenTabForm } = this.props;
     return (
       <div
@@ -111,10 +118,9 @@ class Form1 extends Component {
                 type="text"
                 className="group-form__input"
                 placeholder="VN30F2104"
-                name="code"
-                value={code}
+                name="symbol"
+                value={symbol}
                 onChange={this.handleOnchange}
-                value="VN30F2105"
                 required
               />
             </div>
@@ -181,14 +187,15 @@ class Form1 extends Component {
             </div>
             <div className="col-8 flex">
               <input
-                type="text"
+                type="number"
                 className="group-form__input"
                 placeholder="Khối Lượng"
                 name="quantity"
                 value={quantity}
                 onChange={this.handleOnchange}
+                min={1}
+                max={2}
                 required
-                type="number"
               />
             </div>
           </div>

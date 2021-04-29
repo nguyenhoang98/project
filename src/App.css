@@ -1,11 +1,11 @@
 *{
   box-sizing: border-box;
-  margin:0 ;
   padding:0 ;
 }
 html , body{
   height: 100vh ;
 }
+
 .btn{
   border:none ;
   outline: none;
@@ -17,16 +17,18 @@ html , body{
 .flex{
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
   justify-content: space-between ;
 }
-.grid{
-  width: 100% ; ;
+
+.grid-table-price{
+  width:100% ;
   display: grid;
-  grid-template-columns: 1fr 350px 400px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 .flex_table_code{
   width:100% ;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,10 +38,13 @@ html , body{
   color : #f7941d ;
 }
 .text-purple {
-  color: #ff25ff;
+  color: #6c1b72;
 }
 .text-green {
   color: #18c451 ;
+}
+.bg-dark{
+  background: hsla(0,0%,47.1%,.15) ;
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}

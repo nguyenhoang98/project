@@ -42,12 +42,12 @@ class LoginPage extends Component {
           localStorage.setItem("vnd", res.data.token);
           if (localStorage.getItem("vnd") === res.data.token) {
             push("/home");
-            toast("Đăng Nhập thành công !");
+            toast.success("Đăng Nhập thành công !");
           }
         }
       })
       .catch((err) => {
-        toast("Đăng Nhập không thành công !");
+        toast.error("Đăng Nhập không thành công !");
       });
   }
   render() {

@@ -17,12 +17,11 @@ class MainLeftBottom extends Component {
           })}
         >
           <TradingViewEmbed
-            widgetType={widgetType.ADVANCED_CHART}
+            widgetType={widgetType.SCREENER_CRYPTOCURRENCY}
             widgetConfig={{
               colorTheme: "dark",
-              symbol: "BITMEX:XBTUSD",
               width: "100%",
-              height: "100%",
+              height: "98%",
             }}
           />
         </div>
@@ -33,11 +32,12 @@ class MainLeftBottom extends Component {
           })}
         >
           <TradingViewEmbed
-            widgetType={widgetType.SCREENER_CRYPTOCURRENCY}
+            widgetType={widgetType.ADVANCED_CHART}
             widgetConfig={{
               colorTheme: "dark",
+              symbol: "BITMEX:XBTUSD",
               width: "100%",
-              height: "98%",
+              height: "100%",
             }}
           />
         </div>
@@ -48,9 +48,9 @@ class MainLeftBottom extends Component {
           })}
         >
           <TradingViewEmbed
-            widgetType={widgetType.TICKER_TAPE}
+            widgetType={widgetType.SYMBOL_INFO}
             widgetConfig={{
-              colorTheme: "light",
+              colorTheme: "dark",
               autosize: true,
               width: "100%",
               height: "100%",
@@ -63,16 +63,15 @@ class MainLeftBottom extends Component {
             showMenuTabTradingView: isOpenTabTradingView === 4,
           })}
         >
-          <iframe
-            className="ifNone"
-            src="https://mkw.vndirect.com.vn/leader_lagger?color=gray&amp;height=300"
-            title="Chart"
-            width="100%"
-            height="100%"
-            style={{
-              border: "none",
+          <TradingViewEmbed
+            widgetType={widgetType.FUNDAMENTAL_DATA}
+            widgetConfig={{
+              colorTheme: "dark",
+              autosize: true,
+              width: "100%",
+              height: "100%",
             }}
-          ></iframe>
+          />
         </div>
       </div>
     );

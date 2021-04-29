@@ -5,7 +5,7 @@ import MainLeftBottom from "../../Components/MainOfPageHome/MainLeftBottom/MainL
 import MainCenterTop from "../../Components/MainOfPageHome/MainCenterTop/MainCenterTop";
 import TableCodeContainer from "../../Containers/TableCodeContainer/TableCodeContainer";
 import MenuChangeTab from "../../Components/MenuChangeTab/MenuChangeTab";
-import MainRightTopContainer from "../../Containers/MainRightTopContainer/MainRightTopContainer";
+import MenuRightTop from "../../Components/MainOfPageHome/MainRightTop/MainRightTop";
 import MenuChangeTabTradingView from "../../Components/MenuChangeTabTradingView/MenuChangeTabTradingView";
 import MainRightBottom from "../../Components/MainOfPageHome/MainRightBottom/MainRightBottom";
 class MainOfPageHome extends Component {
@@ -40,7 +40,7 @@ class MainOfPageHome extends Component {
   render() {
     const { isOpenTab, isOpenTabTradingView, isOpenTabForm } = this.state;
     return (
-      <div className="main grid">
+      <div className="main flex">
         <div className="main__left">
           <MainLeftTop />
           <MainLeftBottom isOpenTabTradingView={isOpenTabTradingView} />
@@ -53,7 +53,7 @@ class MainOfPageHome extends Component {
           <TableCodeContainer />
         </div>
         <div className="main__right">
-          <MainRightTopContainer isOpenTab={isOpenTab} />
+          <MenuRightTop isOpenTab={isOpenTab} />
           <MainRightBottom
             isOpenTabForm={isOpenTabForm}
             handleChangeTabForm={this.handleChangeTabForm}

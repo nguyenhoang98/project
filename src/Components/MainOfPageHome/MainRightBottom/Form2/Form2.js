@@ -57,10 +57,10 @@ class Form2 extends Component {
             </div>
             <div className="col-8 flex">
               <div className="col-2">
-                <button className="btn btn-next">a</button>
+                <button className="btn btn-next">≤</button>
               </div>
               <div className="col-2">
-                <button className="btn btn-prev">b</button>
+                <button className="btn btn-prev">≥</button>
               </div>
               <div className="col-8">
                 <input

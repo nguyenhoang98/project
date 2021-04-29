@@ -19,8 +19,8 @@ function ModelTopPlayer(props) {
     }
   );
 
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  if (error) return <div></div>;
+  if (!data) return <div></div>;
   data.sort((a, b) => {
     return b.netAssetValue - a.netAssetValue;
   });
@@ -54,14 +54,43 @@ function ModelTopPlayer(props) {
             </div>
 
             <div className="modeltopplaye__left__title">
-              <h2>BẢNG XẾP HẠNG THÁNG</h2>
+              <h2 className="text-purple">BẢNG XẾP HẠNG THÁNG</h2>
             </div>
+            <div>
+              <div
+                style={{
+                  float: "right",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: 10,
+                    color: "#00de1e",
+                  }}
+                >
+                  <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                  <span
+                    style={{
+                      paddingLeft: 2,
+                    }}
+                  >
+                    NAV
+                  </span>
+                </span>
+              </div>
 
+              <div
+                style={{
+                  clear: "both",
+                }}
+              ></div>
+            </div>
             <div className="flex">
               <span
                 style={{
                   fontSize: 13,
                 }}
+                className="text-orange"
               >
                 CAO THỦ PHÁI SINH
               </span>
@@ -69,6 +98,7 @@ function ModelTopPlayer(props) {
                 style={{
                   fontSize: 10,
                 }}
+                className="text-orange"
               >
                 Đơn vị : VND
               </span>
@@ -120,10 +150,47 @@ function ModelTopPlayer(props) {
           </div>
           <div className="col-6 modeltopplaye__right">
             <div className="modeltopplayer__right__title">
-              <h2>BẢNG XẾP HẠNG TUẦN</h2>
-              <p>(Từ 8h00 thứ 2 đến 15H00 thứ 6 hàng tuần)</p>
+              <h2 className="text-orange">BẢNG XẾP HẠNG TUẦN</h2>
+              <p
+                style={{
+                  fontStyle: "italic",
+                  color: "#616161",
+                  fontSize: 12,
+                }}
+              >
+                (Từ 8h00 thứ 2 đến 15H00 thứ 6 hàng tuần)
+              </p>
             </div>
             <div className="content">
+              <div>
+                <div
+                  style={{
+                    float: "right",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: 10,
+                      color: "#00de1e",
+                    }}
+                  >
+                    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                    <span
+                      style={{
+                        paddingLeft: 2,
+                      }}
+                    >
+                      NAV
+                    </span>
+                  </span>
+                </div>
+
+                <div
+                  style={{
+                    clear: "both",
+                  }}
+                ></div>
+              </div>
               <div
                 className="flex"
                 style={{
@@ -134,6 +201,7 @@ function ModelTopPlayer(props) {
                   style={{
                     fontSize: 13,
                   }}
+                  className="text-orange"
                 >
                   CAO THỦ PHÁI SINH
                 </span>
@@ -141,6 +209,7 @@ function ModelTopPlayer(props) {
                   style={{
                     fontSize: 10,
                   }}
+                  className="text-orange"
                 >
                   Đơn vị : VND
                 </span>

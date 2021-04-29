@@ -29,7 +29,12 @@ class Wrap extends Component {
     const { pathname } = location;
     console.log(pathname);
     return (
-      <div className="wrap">
+      <div
+        className="wrap"
+        style={{
+          height: "100%",
+        }}
+      >
         {pathname !== "/login-page" && (
           <Nav handleShowModelTopPlayer={this.showModelTopPlayer} />
         )}
